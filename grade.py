@@ -10,6 +10,7 @@ from send_email import send_email
 b64map = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 b64pad = "="
 BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz"
+count = 0
 #模拟相关加密
 def hex2b64(h):
 	i = 0
@@ -175,5 +176,6 @@ if __name__ == '__main__':
 			if now < datetime(now.year, now.month, now.day, 8) or now > datetime(now.year, now.month, now.day, 23):
 				time.sleep(60 * 60 * 9)
 			else:
-				time.sleep(10)
-			#print('haha')
+				time.sleep(60 * 5)
+			count += 1
+			print('haha-%s' % count)
